@@ -63,3 +63,16 @@ python -m topotransfer.statistics --records runs/main/topotransfer/records.jsonl
 ```
 
 Supply --reference with a matched record file for paired differences. Resampling uses independent case IDs, or explicit cluster IDs when provided. Repeated observations from one source unit must share cluster. Zero-event bounds refer to an event in an independent cluster.
+
+## Registered compact reproduction setting
+
+Twenty independent finite graph-shift cases, each with 100 independent calibration environments, a compact two-class graph-smoothed predictor and a fixed prespecified shift family. Target labels are confined to scoring; unobservable concept shift is outside the certificate premise.
+
+Run from the repository root after installation. The following commands use the registered setting; they are provided for execution and have not been run as part of the source review.
+
+```bash
+python -m topotransfer prepare --config configs/reproduce.json --output data/reproduce.jsonl
+python -m topotransfer suite --data data/reproduce.jsonl --output runs/reproduce
+```
+
+This setting needs no external dataset or pretrained weights. Generated inputs and declared fault/shift laws define the finite task; reported quantities retain that provenance.
